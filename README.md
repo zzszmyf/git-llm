@@ -21,6 +21,8 @@ echo "LLM_MODEL_NAME=<your-openai-model-name>" >> .env
 ```
 # 在本地以可编辑模式安装项目
 pip install -e . --use-pep517
+or
+python setup.py develop
 ```
 使用-e标志意味着以“editable”模式安装，允许直接在源代码目录中修改并立即生效。--use-pep517选项确保安装过程中遵循PEP 517规范，这对于基于现代构建系统的项目尤为重要。
 

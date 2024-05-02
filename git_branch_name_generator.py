@@ -5,7 +5,8 @@ import sys
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-if __name__ == "__name__":
+
+def main():
   if LLM_API_KEY == "" or LLM_API_KEY == None:
       logging.error("Please set the LLM_API_KEY environment variable.")
       sys.exit(1)
@@ -33,3 +34,7 @@ if __name__ == "__name__":
     ],
   )
   logging.info(completion.choices[0].message.content)
+
+
+if __name__ == "__name__":
+  main()
